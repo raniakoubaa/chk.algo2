@@ -1,0 +1,31 @@
+FUNCTION dot_product(v1,v2: ARRAY_OF INTEGER) : FLOAT
+VAR
+    ps:FLOAT
+    i,j,n,m:INTEGER
+BEGIN
+    ps:=0
+    n=v1.length-1
+    m=v2.length-1
+    FOR 0 FROM  TO n STEP 1 DO
+    IF (n<>m) THEN
+        Write("lenght of v1 and v2 not equal")
+    ELSE
+        ps:=ps+v1[i]*v2[i]
+    END_IF    
+    RETURN ps ;
+END
+ALGORITHM dot_product
+VAR
+   i,j:INTEGER
+    v : ARRAY_OF array;
+BEGIN
+ps:=0
+    FOR i FROM 0 TO v.length-2 STEP 1  DO
+        FOR j FROM i+1 TO v.lenght STEP 1  DO
+            dot_product(v[i],v[j])
+            IF (ps=0) THEN
+                Write(v[i]," And ",v[j],"Are orthogonal")
+            END_IF
+        END_FOR
+    END_FOR
+END
